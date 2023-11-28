@@ -1,0 +1,20 @@
+server:
+  port: 8088
+  max-http-header-size: 10240
+
+spring:
+  application:
+    name: axtone-web
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
